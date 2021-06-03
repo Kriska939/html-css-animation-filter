@@ -101,13 +101,37 @@
     border-radius: 35px;
 }
 
-
 .ex-10-icon {
     font-size: 60px;
+    animation: loading .8s linear infinite;
 }
+
+@keyframes loading {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation: almostLoad 1s linear;
+}
+
+@keyframes almostLoad {
+    0% {
+        transform: rotate(0);
+    }
+    85% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -129,6 +153,8 @@
     width: 60px;
     height: 20px;
 }
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -137,3 +163,34 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: slideTopDiv 2s linear;
+}
+@keyframes slideTopDiv {
+    0% {
+        left: 15%;
+    }
+    50% {
+        left: calc(100% - 64px);
+    }
+    100% {
+        left: 15%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: slideBottomDiv 2s linear;
+}
+@keyframes slideBottomDiv {
+    0% {
+        right: 15%;
+    }
+    50% {
+        right: calc(100% - 64px);
+    }
+    100% {
+        right: 15%;
+    }
+}
+
