@@ -79,10 +79,29 @@
  transform: scale(0.8);
 }
 
+.ex-8-img {
+    transition: transform 3s, filter 1s, border-radius 3s;
+}
+
+.ex-8-img:hover {
+    filter:blur(2px);
+    transform: scale(0.7);
+    border-radius: 30px;
+}
+
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: transform 3s, filter 2s, border-radius 3s;
 }
+
+.ex-9-img:hover {
+    filter:grayscale(0.8) blur(2px);
+    transform: scale(0.8);
+    border-radius: 35px;
+}
+
+
 .ex-10-icon {
     font-size: 60px;
 }
